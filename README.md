@@ -6,8 +6,8 @@
 
 กลยุทธ์นี้ใช้ระบบคะแนนถ่วงน้ำหนักจากปัจจัยต่างๆ ดังนี้:
 
-- **30%** - Earnings Revision Ratio (REV_RATIO)
-- **20%** - Magnitude Percentile (NTM_CHG_PCTILE)
+- **30%** - Earnings Revision Breadth Ratio (REV_RATIO)
+- **20%** - Magnitude Earnings Percentile (NTM_CHG_PCTILE)
 - **20%** - Alpha Momentum (ALPHAMO)
 - **10%** - 1-Month Return Reversal (ABSRET_1M_Pctile_AVG)
 - **10%** - Relative Earnings Yield (FWDRELPE_Pctile)
@@ -31,10 +31,10 @@ pip install pandas numpy matplotlib yfinance python-dateutil openpyxl
 ```
 .
 ├── src/
-│   ├── EarningsRevision_DQS2025.xlsx  # ข้อมูลปัจจัยจาก Bloomberg (quarterly)
-│   ├── Top_Decile.csv                  # ราคาหุ้น Top 50 (จาก Bloomberg)
-│   └── Bottom_Decile.csv               # ราคาหุ้น Bottom 50 (จาก Bloomberg)
-├── main.py       # Main script
+├── EarningsRevision_DQS2025.xlsx   # ข้อมูลปัจจัยจาก Bloomberg (quarterly)
+├── Top_Decile.csv                  # ราคาหุ้น Top 50 (จาก Bloomberg)
+├── Bottom_Decile.csv               # ราคาหุ้น Bottom 50 (จาก Bloomberg)
+├── main.py                         # Main script
 └── README.md
 ```
 
@@ -113,7 +113,8 @@ Max Drawdown (%)           -XX.XX         -XX.XX   -XX.XX      -XX.XX -XX.XX
 2. Backtest period: 5 ปีย้อนหลังจาก `date_as_of`
 3. Benchmark: S&P 500 Index (^SPX) จาก yfinance
 4. Risk-free rate ตั้งที่ 0% (สามารถปรับได้)
-
+5. เนื่องจากอยู่ในช่วงฝึกใช้ Github จึงยังไม่สามารถนำไฟล์เข้าไปอยู่ใน src folder ได้
+6. รายละเอียดเกี่ยวกับ factor อยู่ในไฟล์ pptx
 ---
 
 **Last Updated:** November 2025
